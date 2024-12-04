@@ -1,0 +1,43 @@
+RED="%B%F{red}%b"
+PURPLE="%B%F{purple}%b"
+YELLOW="%B%F{yellow}%b"
+BLUE="%B%F{blue}%b"
+GREEN="%B%F{green}%b"
+COLOR_NONE="%F{white}"
+
+function parse_git_branch () {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+function set_virtualenv () {
+  if test -z "$VIRTUAL_ENV" ; then
+    PYTHON_VIRTUALENV=""
+  else
+    PYTHON_VIRTUALENV="%B%F{magenta}(`basename \"$VIRTUAL_ENV\"`)%b$resetColor "
+  fi
+}
+
+function set_prompt_symbol () {
+  if [[ $EXIT == 0 ]] ; then
+    PROMPT_SYMBOL="${YELLOW}ω${COLOR_NONE}"
+  else
+    PROMPT_SYMBOL="${RED}${EXIT}? ${YELLOW}ω${COLOR_NONE}"
+  fi
+}
+
+function set_zsh_prompt () {
+  local EXIT="$?"
+  set_prompt_symbol
+
+  BRANCH="${RED}$(parse_git_branch)${COLOR_NONE}"
+
+  set_virtualenv
+
+  _prompt="
+${PYTHON_VIRTUALENV}${GREEN}[%n@%m]${COLOR_NONE}:${BLUE}%~${BRANCH}
+${PROMPT_SYMBOL} "
+
+  echo $_prompt
+}
+
+PROMPT='$(set_zsh_prompt)'
