@@ -43,7 +43,8 @@
     "max-length": 50
   },
   "clock": {
-    "timezone": "Europe/Athens",
+    // You may need to change the timezone if the time is incorrect
+    // "timezone": "<timezone>",
     "tooltip-format": "  <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%d/%m/%Y} ",
     "format": "{:%H:%M}  "

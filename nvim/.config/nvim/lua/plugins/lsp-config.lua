@@ -1,22 +1,3 @@
-local mason_packages = {
-  -- Python
-  "pyright",
-  "ruff",
-
-  -- Go
-  "gopls",
-  "golines",
-  "gofumpt",
-  "goimports-reviser",
-
-  -- Rust
-  "rust-analyzer",
-
-  -- Javascript
-  "prettier",
-  "eslint_d",
-}
-
 return {
   {
     "ray-x/lsp_signature.nvim",
@@ -36,6 +17,30 @@ return {
   {
     "williamboman/mason.nvim",
     config = function()
+      local mason_packages = {
+        -- Python
+        "pyright",
+        "ruff",
+        "debugpy",
+        "mypy",
+
+        -- Lua
+        "stylua",
+
+        -- Go
+        "gopls",
+        "golines",
+        "gofumpt",
+        "goimports-reviser",
+
+        -- Rust
+        "rust-analyzer",
+
+        -- Javascript
+        "prettier",
+        "eslint_d",
+      }
+
       require("mason").setup({
         ensure_installed = mason_packages,
       })
