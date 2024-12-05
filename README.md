@@ -62,6 +62,7 @@ If you are using Arch you can use `sudo pacman -S <package-name>` for each of th
 - `neovim`
 - `nodejs` (preferably using `nvm`, make sure to also set a global version)
 - `ripgrep`
+- `fzf`
 
 - Go into neovim
 
