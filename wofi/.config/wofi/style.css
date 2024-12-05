@@ -1,0 +1,115 @@
+* {
+  font-family: "JetBrains Mono NL", monospace;
+  font-size: 17px;
+}
+
+/* Window */
+#window {
+  margin: 0px;
+  padding: 20px;
+  border-radius: 0.2em;
+  background-color: transparent;
+  animation: slideIn 0.2s ease-in-out both;
+}
+
+/* Slide In */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Inner Box */
+#inner-box {
+  margin: 5px;
+  padding: 20px;
+  background-color: #232323;
+  animation: fadeIn 0.2s ease-in-out both;
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Outer Box */
+#outer-box {
+  margin: 5px 25px 25px 25px;
+  border: none;
+  background-color: transparent;
+}
+
+/* Scroll */
+#scroll {
+  margin: 0px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px -1px rgba(22, 22, 22, 1);
+  background-color: #232323;
+}
+
+/* Input */
+#input {
+  margin: 10px 20px;
+  padding: 10px;
+  border: 1px solid #ca2323;
+  border-radius: 25px;
+  outline: none;
+  color: white;
+  background-color: rgba(12, 12, 12, 0.7);
+  animation: fadeIn 0.2s ease-in-out both;
+}
+
+#input:focus {
+  outline: none;
+}
+
+#input *:focus {
+  outline: none;
+}
+
+#input image {
+  border: none;
+  outline: none;
+  color: #ca2323;
+}
+
+/* Text */
+#text {
+  margin: 5px;
+  border: none;
+  color: white;
+  outline: none;
+  animation: fadeIn 0.2s ease-in-out both;
+}
+
+#entry {
+  background-color: #232323;
+  padding: 5px 10px;
+  border: 0.11em solid rgba(0, 0, 0, 0);
+}
+
+#entry arrow {
+  border: none;
+  color: rgba(0, 0, 0, 0);
+}
+
+/* Selected Entry */
+#entry:selected {
+  border: 0.11em solid white;
+  border-radius: 5px;
+}
+
+#entry:selected #text {
+  color: white;
+  background-color: #222222;
+}
