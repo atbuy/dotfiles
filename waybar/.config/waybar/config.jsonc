@@ -1,103 +1,100 @@
-// -*- mode: jsonc -*-
 {
   "layer": "top",
   "position": "bottom",
   "height": 30,
-  "spacing": 4,
+  "spacing": 2,
+  // "exclusive": false,
+  // "gtk-layer-shell": true,
+  // "passthrough": false,
+  // "fixed-center": true,
   "modules-left": [
-    "hyprland/workspaces"
+    "custom/logo",
+    "hyprland/workspaces",
+    "cpu",
+    "memory"
   ],
   "modules-right": [
     "pulseaudio",
-    // "tray",
-    // "network",
-    "cpu",
+    "battery",
     "clock",
-    "battery"
+    "tray"
   ],
-  // Modules configuration
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "warp-on-scroll": false,
     "format": "{name}"
   },
-  "cpu": {
-    "format": "{usage}%  ",
-    "tooltip": false
-  },
-  "memory": {
-    "format": "{}%  "
-  },
   "tray": {
-    "icon-size": 21,
+    // "show-passive-items": false,
     "spacing": 10
   },
-  "custom/music": {
-    "format": "  {}",
-    "escape": true,
-    "interval": 5,
-    "tooltip": false,
-    "exec": "playerctl metadata --format='{{ artist }}  {{ title }}'",
-    "on-click": "playerctl play-pause",
-    "max-length": 50
-  },
-  "clock": {
-    // You may need to change the timezone if the time is incorrect
-    // "timezone": "<timezone>",
-    "tooltip-format": "  <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%d/%m/%Y} ",
-    "format": "{:%H:%M}  "
-  },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
   "battery": {
-    "interval": 60,
+    "bat": "BAT0",
+    "adapter": "ADP0",
+    "interval": 1,
     "states": {
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% {icon} ",
+    "max-length": 20,
+    "format": "{icon}{capacity}%",
+    "format-warning": "{icon}{capacity}%",
+    "format-critical": "{icon}{capacity}%",
+    "format-charging": "<span foreground='#26ff55'> {capacity} %</span>",
+    "format-plugged": "<span foreground='#26ff55'>  {capacity}%</span>",
+    "format-alt": "{icon} {time}",
+    "format-full": "<span foreground='#26ff55'> {capacity} %</span>",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "max-length": 25
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
   },
-  "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
-    "format-linked": "{ifname} (No IP)  ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+  "clock": {
+    "format": "<span color='#6bfffd'> </span>{:%I:%M %p}",
+    "format-alt": "<span color='#ff9854'> </span>{:%a %b %d}",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": true,
+    "interval": 1
+  },
+  "memory": {
+    "format": "  {used:0.2f}G"
   },
   "pulseaudio": {
-    "scroll-step": 1,
-    "format": "{volume}% {icon} ",
-    "format-muted": " ",
+    "format": "{icon} {volume}%",
+    "format-muted": "  muted",
     "format-icons": {
+      "headphone": " ",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
       "default": [
-        "",
-        "",
+        " ",
+        " ",
         " "
       ]
     },
     "on-click": "pavucontrol"
+  },
+  "custom/logo": {
+    "format": "󰣇 ",
+    "tooltip": false
+  },
+  "custom/sep": {
+    "format": "|",
+    "tooltip": false
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout -p layer-shell &",
+    "format": " "
   }
 }
