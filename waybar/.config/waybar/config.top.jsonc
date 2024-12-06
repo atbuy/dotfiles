@@ -1,0 +1,52 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 2,
+  // "exclusive": false,
+  // "gtk-layer-shell": true,
+  // "passthrough": false,
+  // "fixed-center": true,
+  "modules-left": [
+    "custom/logo",
+    "network"
+  ],
+  "modules-right": [
+    "clock"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}"
+  },
+  "clock": {
+    "format": "<span color='#6bfffd'> </span>{:%I:%M %p}",
+    "format-alt": "<span color='#ff9854'> </span>{:%a %b %d}",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "network": {
+    // "interface": "wlan0",
+    "format": "{ifname} [󰾆 {bandwidthTotalBytes}]",
+    // "format-wifi": "{icon} [󰾆 {bandwidthTotalBytes}]",
+    "format-wifi": "{icon}   {bandwidthDownBytes}  {bandwidthUpBytes}",
+    // "format-ethernet": "󱘖  {ifname} [󰾆 {bandwidthTotalBytes}]",
+    "format-ethernet": "󱘖  {ifname}  {bandwidthDownBytes}  {bandwidthUpBytes}",
+    "format-disconnected": "󰌙 Disconnected ⚠ ",
+    "format-alt": " {ipaddr}  {bandwidthDownBytes}  {bandwidthUpBytes}",
+    "tooltip-format": "{ifname} via {gwaddr}  ",
+    "tooltip-format-wifi": "{frequency} MHz ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ipaddr}/{cidr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "tooltip-format-disconnected": "Disconnected ⚠ ",
+    "max-length": 50,
+    "interval": 5,
+    "format-icons": [
+      "󰤯 ",
+      "󰤟 ",
+      "󰤢 ",
+      "󰤢 ",
+      "󰤨 "
+    ]
+  }
+}
+

@@ -61,6 +61,7 @@ window#waybar.hidden {
 #pulseaudio,
 #battery,
 #cpu,
+#network,
 #tray,
 #memory,
 #window {
@@ -110,6 +111,10 @@ window#waybar.empty #window {
 
 #window {
   color: #a6e3a1;
+}
+
+#network {
+  color: #e05a51;
 }
 
 #pulseaudio {

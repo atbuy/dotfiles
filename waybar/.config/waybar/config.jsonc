@@ -96,5 +96,27 @@
     "tooltip": false,
     "on-click": "wlogout -p layer-shell &",
     "format": " "
+  },
+  "network": {
+    // "interface": "wlan0",
+    "format": "{ifname} [󰾆 {bandwidthTotalBytes}]",
+    // "format-wifi": "{icon} [󰾆 {bandwidthTotalBytes}]",
+    "format-wifi": "{icon} [ {bandwidthUpBytes}  {bandwidthDownBytes}]",
+    // "format-ethernet": "󱘖  {ifname} [󰾆 {bandwidthTotalBytes}]",
+    "format-ethernet": "󱘖  {ifname} [ {bandwidthUpBytes}  {bandwidthDownBytes}]",
+    "format-disconnected": "󰌙 Disconnected ⚠ ",
+    "format-alt": "  {ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "tooltip-format": "{ifname} via {gwaddr}  ",
+    "tooltip-format-wifi": "{frequency} MHz ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ipaddr}/{cidr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "tooltip-format-disconnected": "Disconnected ⚠ ",
+    "max-length": 50,
+    "format-icons": [
+      "󰤯 ",
+      "󰤟 ",
+      "󰤢 ",
+      "󰤢 ",
+      "󰤨 "
+    ]
   }
 }
