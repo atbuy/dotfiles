@@ -12,7 +12,7 @@ window#waybar {
   transition-duration: 0.5s;
   /* background-color: #1e1e2e; */
   /* background-color: #181825; */
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 window#waybar.hidden {
@@ -68,12 +68,15 @@ window#waybar.hidden {
   padding: 0px 8px;
   margin: 6px 3px;
   color: #e5e5e5;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  border-radius: 5px;
   background-color: #1e1e1e;
 }
 
 #custom-logo {
-  padding: 0px 10px;
+  color: #1793d1;
+  font-size: 25px;
+  margin-left: 10px;
 }
 
 #tray {
