@@ -11,7 +11,7 @@ keymap("n", "<leader>fm", function()
   local clients = vim.lsp.get_active_clients()
   for _, client in ipairs(clients) do
     local name = client["name"]
-    if name == "ruff_lsp" then
+    if name == "ruff" then
       vim.lsp.buf.code_action({
         context = { only = { "source.organizeImports" } },
         apply = true,
