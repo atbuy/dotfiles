@@ -36,6 +36,9 @@ return {
         -- Rust
         "rust-analyzer",
 
+        -- SystemVerilog
+        "svls",
+
         -- Javascript
         "prettier",
         "eslint_d",
@@ -82,6 +85,9 @@ return {
           -- Make
           "autotools_ls",
 
+          -- SystemVerilog
+          "svls",
+
           -- Docker
           "dockerls",
           "docker_compose_language_service",
@@ -110,6 +116,7 @@ return {
       lspconfig.eslint.setup({ capabilities = capabilities })
       lspconfig.emmet_ls.setup({ capabilities = capabilities })
       lspconfig.tailwindcss.setup({ capabilities = capabilities })
+      lspconfig.svls.setup({ capabilities = capabilities })
       lspconfig.pyright.setup({
         capabilities = capabilities,
         settings = {
@@ -140,5 +147,16 @@ return {
       -- Keymaps
       require("keymaps.lspconfig")
     end,
+    opts = {
+      servers = {
+        svls = {
+          root_dir = function(_)
+            return require("lspconfig.util").find_git_ancestor
+          end,
+          cmd = { "svls" },
+          filetypes = { "verilog", "systemverilog" },
+        },
+      },
+    },
   },
 }
