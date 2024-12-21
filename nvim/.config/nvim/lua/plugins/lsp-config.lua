@@ -114,7 +114,21 @@ return {
       lspconfig.html.setup({ capabilities = capabilities })
       lspconfig.cssls.setup({ capabilities = capabilities })
       lspconfig.eslint.setup({ capabilities = capabilities })
-      lspconfig.emmet_ls.setup({ capabilities = capabilities })
+      lspconfig.emmet_ls.setup({
+        capabilities = capabilities,
+        filetypes = {
+          "html",
+          "css",
+          "scss",
+          "less",
+          "sass",
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+          "php",
+        }
+      })
       lspconfig.tailwindcss.setup({ capabilities = capabilities })
       lspconfig.svls.setup({ capabilities = capabilities })
       lspconfig.pyright.setup({
