@@ -19,7 +19,7 @@ fi
 echo -n "$CURRENT_SONG" > ~/.config/hypr/hyprlock/current_song_name
 
 # Get song's cover art URL from playerctl
-URL=`playerctl metadata | grep artUrl | awk '{ print $3 }'`
+URL=`playerctl --player="spotify" metadata | grep artUrl | awk '{ print $3 }'`
 
 # Log when we download something just for debugging
 # This file might required some cleanup from time to time, depending on lock screen usage
