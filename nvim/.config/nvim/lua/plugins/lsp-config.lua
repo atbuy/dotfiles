@@ -37,7 +37,7 @@ return {
         "rust-analyzer",
 
         -- SystemVerilog
-        "svls",
+        -- "svls",
 
         -- Javascript
         "prettier",
@@ -86,7 +86,7 @@ return {
           "autotools_ls",
 
           -- SystemVerilog
-          "svls",
+          -- "svls",
 
           -- Docker
           "dockerls",
@@ -130,7 +130,7 @@ return {
         }
       })
       lspconfig.tailwindcss.setup({ capabilities = capabilities })
-      lspconfig.svls.setup({ capabilities = capabilities })
+      -- lspconfig.svls.setup({ capabilities = capabilities })
       lspconfig.pyright.setup({
         capabilities = capabilities,
         settings = {
