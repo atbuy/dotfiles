@@ -1,0 +1,32 @@
+# Add some padding
+window-padding-x = 5
+
+# Set font
+font-family = UbuntuMono Nerd Font Mono
+font-size = 16
+
+# Theme
+theme = NvimDark
+background = 282828
+
+# Keybind tabs
+keybind = ctrl+1=goto_tab:1
+keybind = ctrl+2=goto_tab:2
+keybind = ctrl+3=goto_tab:3
+keybind = ctrl+4=goto_tab:4
+keybind = ctrl+5=goto_tab:5
+keybind = ctrl+6=goto_tab:6
+keybind = ctrl+7=goto_tab:7
+keybind = ctrl+8=goto_tab:8
+keybind = ctrl+9=goto_tab:9
+keybind = ctrl+0=last_tab
+keybind = ctrl+shift+w=close_tab
+
+# Keybind splits
+keybind = ctrl+shift+|=new_split:right
+keybind = ctrl+shift+-=new_split:down
+keybind = ctrl+e=equalize_splits
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+h=goto_split:down
+keybind = ctrl+h=goto_split:up
+keybind = ctrl+h=goto_split:right
