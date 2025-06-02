@@ -43,6 +43,9 @@ return {
 				-- Javascript
 				"prettier",
 				"eslint_d",
+
+				-- Zig
+				"zls",
 			}
 
 			require("mason").setup({
@@ -99,7 +102,7 @@ return {
 					-- Others
 					"jsonls",
 					"yamlls",
-          "taplo",
+					"taplo",
 					-- "powershell_es",
 				},
 				automatic_installation = true,
@@ -160,6 +163,7 @@ return {
 			lspconfig.yamlls.setup({ capabilities = capabilities })
 			lspconfig.taplo.setup({ capabilities = capabilities })
 			lspconfig.powershell_es.setup({ capabilities = capabilities })
+			lspconfig.zls.setup({ capabilities = capabilities })
 
 			-- Keymaps
 			require("keymaps.lspconfig")
