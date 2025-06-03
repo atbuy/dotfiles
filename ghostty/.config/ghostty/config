@@ -4,7 +4,7 @@ window-decoration = none
 
 # Font
 font-family = UbuntuMono Nerd Font Mono
-font-size = 16
+font-size = 12
 
 # Theme
 theme = NvimDark
