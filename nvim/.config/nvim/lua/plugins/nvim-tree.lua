@@ -36,7 +36,7 @@ return {
 		})
 
 		-- Focus on tree on setup
-		vim.cmd("NvimTreeFocus")
+		-- vim.cmd("NvimTreeFocus")
 
 		require("keymaps.nvim-tree")
 	end,
