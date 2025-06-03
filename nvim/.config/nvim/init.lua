@@ -7,6 +7,7 @@ vim.cmd("set foldmethod=indent")
 vim.cmd("set foldcolumn=0")
 vim.cmd("set foldlevel=20")
 vim.cmd("set foldenable")
+vim.cmd("set mousescroll=ver:1")
 -- vim.cmd("set notermguicolors")
 vim.opt.number = true
 vim.g.mapleader = " "
