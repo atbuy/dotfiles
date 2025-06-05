@@ -112,87 +112,43 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({ capabilities = capabilities })
-      lspconfig.ts_ls.setup({ capabilities = capabilities })
-      lspconfig.html.setup({ capabilities = capabilities })
-      lspconfig.cssls.setup({ capabilities = capabilities })
-      lspconfig.eslint.setup({ capabilities = capabilities })
-      lspconfig.emmet_ls.setup({
-        capabilities = capabilities,
-        filetypes = {
-          "html",
-          "css",
-          "scss",
-          "less",
-          "sass",
-          "javascript",
-          "javascriptreact",
-          "typescript",
-          "typescriptreact",
-          "php",
-        },
-      })
-      lspconfig.tailwindcss.setup({ capabilities = capabilities })
-      -- lspconfig.svls.setup({ capabilities = capabilities })
-      lspconfig.pyright.setup({
-        capabilities = capabilities,
-        on_new_config = function(cfg, root)
-          print(root)
-        end,
-        root_dir = function()
-          return vim.fn.getcwd()
-        end,
-        settings = {
-          pyright = {
-            disableOrganizeImports = true,
-          },
-          python = {
-            analysis = {
-              autoSearchPaths = true,
-              useLibraryCodeForTypes = true,
-              diagnosticMode = "openFilesOnly",
+      -- Python
+      vim.lsp.enable("pyright")
+      vim.lsp.enable("ruff")
+      -- Go
+      vim.lsp.enable("gopls")
+      -- HTML/CSS/JS
+      vim.lsp.enable("emmet_ls")
+      vim.lsp.enable("tailwindcss")
+      vim.lsp.enable("eslint")
+      vim.lsp.enable("cssls")
+      vim.lsp.enable("html")
+      vim.lsp.enable("ts_ls")
+      -- Lua
+      vim.lsp.enable("lua_ls")
+      -- Rust
+      vim.lsp.enable("rust_analyzer")
+      -- C
+      vim.lsp.enable("clangd")
+      -- Docker
+      vim.lsp.enable("dockerls")
+      vim.lsp.enable("docker_compose_language_service")
+      -- SQL
+      vim.lsp.enable("sqlls")
+      -- JSON/YAML/TOML/Make
+      vim.lsp.enable("jsonls")
+      vim.lsp.enable("yamlls")
+      vim.lsp.enable("taplo")
+      vim.lsp.enable("autotools_ls")
 
-              -- Only use Ruff for linting
-              ignore = { "*" },
-              typeCheckingMode = "off",
-            },
-          },
-        },
-      })
-      lspconfig.ruff.setup({
-        capabilities = capabilities,
-        filetypes = { "python" },
-      })
-      lspconfig.gopls.setup({ capabilities = capabilities })
-      lspconfig.phpactor.setup({ capabilities = capabilities })
-      lspconfig.rust_analyzer.setup({ capabilities = capabilities })
-      lspconfig.clangd.setup({ capabilities = capabilities })
-      lspconfig.sqlls.setup({ capabilities = capabilities })
-      lspconfig.autotools_ls.setup({ capabilities = capabilities })
-      lspconfig.dockerls.setup({ capabilities = capabilities })
-      lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
-      lspconfig.kotlin_language_server.setup({ capabilities = capabilities })
-      lspconfig.jsonls.setup({ capabilities = capabilities })
-      lspconfig.yamlls.setup({ capabilities = capabilities })
-      lspconfig.taplo.setup({ capabilities = capabilities })
-      lspconfig.powershell_es.setup({ capabilities = capabilities })
-      lspconfig.zls.setup({ capabilities = capabilities })
+      -- lspconfig.svls.setup({ capabilities = capabilities })
+      -- lspconfig.phpactor.setup({ capabilities = capabilities })
+      -- lspconfig.kotlin_language_server.setup({ capabilities = capabilities })
+      -- lspconfig.powershell_es.setup({ capabilities = capabilities })
+      -- lspconfig.zls.setup({ capabilities = capabilities })
 
       -- Keymaps
       require("keymaps.lspconfig")
     end,
-    opts = {
-      servers = {
-        svls = {
-          root_dir = function(_)
-            return require("lspconfig.util").find_git_ancestor
-          end,
-          cmd = { "svls" },
-          filetypes = { "verilog", "systemverilog" },
-        },
-      },
-    },
   },
 }
