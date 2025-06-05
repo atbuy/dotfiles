@@ -1,10 +1,11 @@
 # Window
 window-padding-x = 5
 window-decoration = none
+cursor-style = block
 
 # Font
 font-family = UbuntuMono Nerd Font Mono
-font-size = 12
+font-size = 13
 
 # Theme
 theme = NvimDark
@@ -27,7 +28,7 @@ keybind = ctrl+shift+w=close_tab
 keybind = ctrl+shift+|=new_split:right
 keybind = ctrl+shift+-=new_split:down
 keybind = ctrl+e=equalize_splits
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+h=goto_split:down
-keybind = ctrl+h=goto_split:up
-keybind = ctrl+h=goto_split:right
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right
