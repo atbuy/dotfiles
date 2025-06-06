@@ -6,7 +6,6 @@ return {
     lazygit = { enabled = true },
     bigfile = { enabled = true },
     quickfile = { enabled = true },
-    scroll = {},
     dashboard = {}
   },
   keys = {
