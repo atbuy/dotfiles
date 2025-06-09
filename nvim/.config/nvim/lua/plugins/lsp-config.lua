@@ -97,7 +97,8 @@ return {
           "docker_compose_language_service",
 
           -- Java
-          -- "kotlin_language_server",
+          "jdtls",
+          "kotlin_language_server",
 
           -- Others
           "jsonls",
@@ -133,6 +134,8 @@ return {
       -- Docker
       vim.lsp.enable("dockerls")
       vim.lsp.enable("docker_compose_language_service")
+      -- Java
+      vim.lsp.enable("jdtls")
       -- SQL
       vim.lsp.enable("sqlls")
       -- JSON/YAML/TOML/Make
@@ -143,7 +146,6 @@ return {
 
       -- lspconfig.svls.setup({ capabilities = capabilities })
       -- lspconfig.phpactor.setup({ capabilities = capabilities })
-      -- lspconfig.kotlin_language_server.setup({ capabilities = capabilities })
       -- lspconfig.powershell_es.setup({ capabilities = capabilities })
       -- lspconfig.zls.setup({ capabilities = capabilities })
 
