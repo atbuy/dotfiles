@@ -1,3 +1,5 @@
+@theme "catppuccin-macchiato"
+
 configuration{
   modi: "run,window,combi";
   icon-theme: "Oranchelo";
@@ -12,4 +14,3 @@ configuration{
   display-combi: " 🪟 Window";
 }
 
-@theme "catppuccin-macchiato"
