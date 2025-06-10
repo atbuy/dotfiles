@@ -1,7 +1,6 @@
 # Window
 window-padding-x = 5
 window-decoration = none
-cursor-style = block
 
 # Font
 font-family = UbuntuMono Nerd Font Mono
@@ -27,7 +26,7 @@ keybind = ctrl+shift+w=close_tab
 # Keybind splits
 keybind = ctrl+shift+|=new_split:right
 keybind = ctrl+shift+-=new_split:down
-keybind = ctrl+e=equalize_splits
+keybind = ctrl+shift+e=equalize_splits
 keybind = ctrl+shift+h=goto_split:left
 keybind = ctrl+shift+j=goto_split:down
 keybind = ctrl+shift+k=goto_split:up
