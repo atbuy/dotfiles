@@ -1,5 +1,3 @@
-@theme "catppuccin-macchiato"
-
 configuration{
   modi: "run,window,combi";
   icon-theme: "Oranchelo";
@@ -15,3 +13,4 @@ configuration{
   sidebar-mode: true;
 }
 
+@theme "catppuccin-macchiato"
