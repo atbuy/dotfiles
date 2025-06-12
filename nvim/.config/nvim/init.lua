@@ -11,6 +11,8 @@ vim.cmd("set mousescroll=ver:1")
 -- vim.cmd("set notermguicolors")
 vim.opt.number = true
 vim.g.mapleader = " "
+-- Disable built-in python provider
+vim.g.loaded_python3_provider = false
 
 -- Load lazy.nvim and if it's not found then install it
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
