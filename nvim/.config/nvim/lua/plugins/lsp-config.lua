@@ -58,58 +58,58 @@ return {
       end, {})
     end,
   },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          -- Lua
-          "lua_ls",
-
-          -- Web
-          "ts_ls",
-          "html",
-          "cssls",
-          "eslint",
-          "emmet_ls",
-          "tailwindcss",
-
-          -- Backend
-          "ruff",
-          "gopls",
-          "phpactor",
-
-          -- Low level
-          "rust_analyzer",
-          -- "clangd",
-
-          -- SQL
-          -- "sqlls",
-
-          -- Make
-          "autotools_ls",
-
-          -- SystemVerilog
-          -- "svls",
-
-          -- Docker
-          "dockerls",
-          "docker_compose_language_service",
-
-          -- Java
-          "jdtls",
-          "kotlin_language_server",
-
-          -- Others
-          "jsonls",
-          "yamlls",
-          "taplo",
-          -- "powershell_es",
-        },
-        automatic_installation = true,
-      })
-    end,
-  },
+  -- {
+  --   "williamboman/mason-lspconfig.nvim",
+  --   config = function()
+  --     require("mason-lspconfig").setup({
+  --       ensure_installed = {
+  --         -- Lua
+  --         "lua_ls",
+  --
+  --         -- Web
+  --         "ts_ls",
+  --         "html",
+  --         "cssls",
+  --         "eslint",
+  --         "emmet_ls",
+  --         "tailwindcss",
+  --
+  --         -- Backend
+  --         "ruff",
+  --         "gopls",
+  --         "phpactor",
+  --
+  --         -- Low level
+  --         "rust_analyzer",
+  --         -- "clangd",
+  --
+  --         -- SQL
+  --         -- "sqlls",
+  --
+  --         -- Make
+  --         "autotools_ls",
+  --
+  --         -- SystemVerilog
+  --         -- "svls",
+  --
+  --         -- Docker
+  --         "dockerls",
+  --         "docker_compose_language_service",
+  --
+  --         -- Java
+  --         "jdtls",
+  --         "kotlin_language_server",
+  --
+  --         -- Others
+  --         "jsonls",
+  --         "yamlls",
+  --         "taplo",
+  --         -- "powershell_es",
+  --       },
+  --       automatic_installation = true,
+  --     })
+  --   end,
+  -- },
   {
     "neovim/nvim-lspconfig",
     config = function()
