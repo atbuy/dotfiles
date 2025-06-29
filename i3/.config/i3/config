@@ -3,6 +3,7 @@ set $mod Mod1
 font pango:JetBrainsMono Nerd Font Mono 13
 
 # exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf
+exec_always --no-startup-id dunst &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always feh --bg-center --bg-scale ~/.config/backgrounds/wallpaper.png
 
