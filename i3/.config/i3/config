@@ -2,7 +2,7 @@ set $mod Mod1
 
 font pango:JetBrainsMono Nerd Font Mono 13
 
-exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf
+# exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always feh --bg-center --bg-scale ~/.config/backgrounds/wallpaper.png
 
@@ -70,10 +70,14 @@ bindsym $mod+a focus parent
 gaps inner 10
 gaps outer 10
 
-# Remove title bars
+# Set border width
 default_border pixel 4
 default_floating_border pixel 4
 
+# Set border colors
+client.focused #737373 #737373 #F8F8F2 #737373 #737373
+client.focused_inactive #343746 #343746 #F8F8F2 #21222C #21222C
+client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
 
 # Define names for default workspaces to configure key binds later.
 set $ws1 "1"
