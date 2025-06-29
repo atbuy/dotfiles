@@ -4,7 +4,7 @@ font pango:JetBrainsMono Nerd Font Mono 13
 
 exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
-exec_always feh --bg-center --bg-scale ~/.config/feh/background_image.png
+exec_always feh --bg-center --bg-scale ~/.config/backgrounds/wallpaper.png
 
 exec --no-startup-id dex --autostart --environment i3
 
@@ -87,6 +87,16 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# Set monitor names
+set $monitor_center "DP-2"
+set $monitor_right "HDMI-0"
+set $monitor_left "DP-0"
+
+# Assign workspaces to specific monitors
+workspace $ws1 output $monitor_center
+workspace $ws3 output $monitor_right
+workspace $ws4 output $monitor_left
+
 # Switch workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -116,7 +126,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Exit i3
-bindsym $mod+Shift+Backspace exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Take screenshot
 bindsym Ctrl+F12 exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
