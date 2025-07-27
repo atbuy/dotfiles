@@ -23,7 +23,7 @@ opts.desc = "Save file"
 keymap("n", "<C-s>", ":update<CR>", opts)
 
 opts.desc = "Save file in insert mode"
-keymap("i", "<C-s>", "<Esc>:update<CR>i", opts)
+keymap("i", "<C-s>", "<Esc>:update<CR>a", opts)
 
 -- Quick exit neovim
 opts.desc = "Quick exit"
