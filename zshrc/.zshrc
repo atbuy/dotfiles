@@ -140,3 +140,5 @@ alias cd=z
 
 alias lzd="lazydocker"
 alias lzg="lazygit"
+
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
