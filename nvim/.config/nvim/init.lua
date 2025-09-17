@@ -1,18 +1,20 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set rnu!")
-vim.cmd("set foldmethod=indent")
-vim.cmd("set foldcolumn=0")
-vim.cmd("set foldlevel=20")
-vim.cmd("set foldenable")
-vim.cmd("set mousescroll=ver:1")
--- vim.cmd("set notermguicolors")
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.relativenumber = true
+vim.opt.foldmethod = "indent"
+vim.opt.foldcolumn = "0"
+vim.opt.foldlevel = 20
+vim.opt.foldenable = true
+vim.opt.mousescroll = "ver:1"
 vim.opt.number = true
-vim.g.mapleader = " "
+-- vim.opt.notermguicolors = true
+
 -- Disable built-in python provider
 vim.g.loaded_python3_provider = false
+
+vim.g.mapleader = " "
 
 -- Load lazy.nvim and if it's not found then install it
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
