@@ -1,6 +1,6 @@
 local opts = {
-	noremap = true,
-	silent = true,
+  noremap = true,
+  silent = true,
 }
 
 local keymap = vim.keymap.set
@@ -12,4 +12,3 @@ keymap("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
 -- Toggle tree
 opts.desc = "Toggle tree"
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
-

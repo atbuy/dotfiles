@@ -1,5 +1,5 @@
 local opts = {
-noremap = true,
+  noremap = true,
   silent = true,
 }
 

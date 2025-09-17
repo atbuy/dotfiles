@@ -1,6 +1,6 @@
 local opts = {
-	noremap = true,
-	silent = true,
+  noremap = true,
+  silent = true,
 }
 
 local keymap = vim.keymap.set
@@ -28,10 +28,10 @@ keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)
 
 opts.desc = "Go to next diagnostic"
 keymap("n", "]d", function()
-	vim.diagnostic.goto_next({ float = { border = "rounded" } })
+  vim.diagnostic.goto_next({ float = { border = "rounded" } })
 end, opts)
 
 opts.desc = "Go to previous diagnostic"
 keymap("n", "[d", function()
-	vim.diagnostic.goto_prev({ float = { border = "rounded" } })
+  vim.diagnostic.goto_prev({ float = { border = "rounded" } })
 end, opts)

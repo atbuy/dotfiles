@@ -1,4 +1,4 @@
 return {
-	"nvim-java/nvim-java",
-	priority = 1000,
+  "nvim-java/nvim-java",
+  priority = 1000,
 }

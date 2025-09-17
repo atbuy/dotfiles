@@ -9,6 +9,6 @@ return {
     dashboard = {}
   },
   keys = {
-    { "<leader>lg", function() Snacks.lazygit() end, desc = "Lazygit"},
+    { "<leader>lg", function() Snacks.lazygit() end, desc = "Lazygit" },
   }
 }
