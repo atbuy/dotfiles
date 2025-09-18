@@ -11,7 +11,7 @@ return {
     dapui.setup()
 
     local dap_python = require("dap-python")
-    dap_python.setup("~/.pyenv/versions/3.12.7/envs/debugpy/bin/python")
+    dap_python.setup("~/.pyenv/versions/debugpy/bin/python")
     dap_python.test_runner = "pytest"
 
     dap.listeners.before.attach.dapui_config = function()
