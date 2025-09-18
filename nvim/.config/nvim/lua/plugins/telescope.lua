@@ -20,12 +20,13 @@ return {
         },
         pickers = {
           live_grep = {
-            file_ignore_patterns = { "node_modules", ".git", ".venv" },
             additional_args = function(_)
-              return { "--hidden" }
+              return { "--hidden", "--no-ignore" }
             end,
+            file_ignore_patterns = { "node_modules", ".git", ".venv" },
           },
           find_files = {
+            find_command = { "fd", "--type", "f", "--hidden", "--no-ignore" },
             file_ignore_patterns = { "node_modules", ".git", ".venv" },
             hidden = true,
           }
