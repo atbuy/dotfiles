@@ -6,7 +6,7 @@ return {
     lazygit = { enabled = true },
     bigfile = { enabled = true },
     quickfile = { enabled = true },
-    dashboard = {}
+    dashboard = { enabled = true },
   },
   keys = {
     { "<leader>lg", function() Snacks.lazygit() end, desc = "Lazygit" },

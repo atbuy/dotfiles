@@ -1,9 +1,8 @@
 return {
   "lewis6991/gitsigns.nvim",
-  config = function()
-    local gitsigns = require("gitsigns")
-    gitsigns.setup()
-
+  opts = {},
+  config = function(_, opts)
+    require("gitsigns").setup(opts)
     require("keymaps.gitsigns")
   end,
 }
