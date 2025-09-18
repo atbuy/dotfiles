@@ -1,4 +1,3 @@
-vim.cmd([[set mouse=]])
 vim.cmd([[set noswapfile]])
 
 vim.opt.expandtab = true
@@ -44,4 +43,3 @@ require("lazy").setup("plugins")
 
 -- Load keymaps
 require("keymaps.general")
-require("keymaps.dadbod")
