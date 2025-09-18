@@ -1,5 +1,3 @@
-vim.cmd([[set noswapfile]])
-
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -18,6 +16,7 @@ vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 vim.opt.winborder = "rounded"
 vim.opt.smartindent = true
+vim.opt.swapfile = false
 
 -- Disable built-in python provider
 vim.g.loaded_python3_provider = false
