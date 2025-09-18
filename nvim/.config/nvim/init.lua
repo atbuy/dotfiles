@@ -1,3 +1,6 @@
+vim.cmd([[set mouse=]])
+vim.cmd([[set noswapfile]])
+
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -9,7 +12,13 @@ vim.opt.foldlevel = 20
 vim.opt.foldenable = true
 vim.opt.mousescroll = "ver:1"
 vim.opt.number = true
--- vim.opt.notermguicolors = true
+vim.opt.wrap = false
+vim.opt.cursorcolumn = false
+vim.opt.ignorecase = true
+vim.opt.termguicolors = true
+vim.opt.signcolumn = "yes"
+vim.opt.winborder = "rounded"
+vim.opt.smartindent = true
 
 -- Disable built-in python provider
 vim.g.loaded_python3_provider = false
