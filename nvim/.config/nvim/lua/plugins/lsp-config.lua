@@ -23,16 +23,19 @@ return {
         "ruff",
         "debugpy",
         "mypy",
-        "taplo", -- TOML
 
         -- Lua
         "stylua",
+        "lua-language-server",
 
         -- Go
         "gopls",
         "golines",
         "gofumpt",
         "goimports-reviser",
+
+        -- C
+        "clangd",
 
         -- Rust
         "rust-analyzer",
@@ -41,11 +44,35 @@ return {
         -- "svls",
 
         -- Javascript
+        "html-lsp",
+        "css-lsp",
+        "emmet-ls",
         "prettier",
+        "eslint-lsp",
         "eslint_d",
+        "tailwindcss-language-server",
+        "typescript-language-server",
 
         -- Zig
         "zls",
+
+        -- Java
+        "jdtls",
+
+        -- Docker
+        "dockerfile-language-server",
+        "docker-compose-language-service",
+
+        -- SQL
+        "sqlls",
+
+        -- Others
+        "taplo",                    -- TOML
+        "jq-lsp",                   -- JSON
+        "yaml-language-server",     -- YAML
+        "autotools-language-server" -- Make
+
+
       }
 
       require("mason").setup({
