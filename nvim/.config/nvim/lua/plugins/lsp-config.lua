@@ -66,13 +66,15 @@ return {
         -- SQL
         "sqlls",
 
+        -- Typst
+        "tinymist",
+        "typstyle",
+
         -- Others
-        "taplo",                    -- TOML
-        "jq-lsp",                   -- JSON
-        "yaml-language-server",     -- YAML
-        "autotools-language-server" -- Make
-
-
+        "taplo",                     -- TOML
+        "jq-lsp",                    -- JSON
+        "yaml-language-server",      -- YAML
+        "autotools-language-server", -- Make
       }
 
       require("mason").setup({
@@ -133,6 +135,15 @@ return {
 
       -- Make
       vim.lsp.enable("autotools_ls")
+
+      -- Typst
+      vim.lsp.config["tinymist"] = {
+        filetypes = { "typ" },
+        settings = {
+          formatterMode = "typstyle",
+        }
+      }
+      vim.lsp.enable("tinymist")
 
       -- lspconfig.svls.setup({ capabilities = capabilities })
       -- lspconfig.phpactor.setup({ capabilities = capabilities })
