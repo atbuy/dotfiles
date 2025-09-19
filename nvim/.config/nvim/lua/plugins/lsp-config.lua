@@ -138,7 +138,6 @@ return {
 
       -- Typst
       vim.lsp.config["tinymist"] = {
-        filetypes = { "typ" },
         settings = {
           formatterMode = "typstyle",
         }
