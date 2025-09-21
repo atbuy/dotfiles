@@ -7,7 +7,7 @@ font-family = UbuntuMono Nerd Font Mono
 font-size = 13
 
 # Theme
-theme = NvimDark
+theme = Nvim Dark
 background = 282828
 
 # Keybind tabs
