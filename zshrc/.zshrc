@@ -22,7 +22,7 @@ CASE_SENSITIVE="true"
 
 # Run neofetch only if we are not in a TMUX session
 if [[ -z "$TMUX" ]] ; then
-  neofetch
+  fastfetch
 fi
 
 # Uncomment the following line to use hyphen-insensitive completion.
