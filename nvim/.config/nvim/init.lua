@@ -1,3 +1,7 @@
+if vim.loader then
+  vim.loader.enable()
+end
+
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -18,8 +22,10 @@ vim.opt.winborder = "rounded"
 vim.opt.smartindent = true
 vim.opt.swapfile = false
 
--- Disable built-in python provider
-vim.g.loaded_python3_provider = false
+-- Disable built-in providers
+vim.g.loaded_python3_provider = true
+vim.g.loaded_netrw = true
+vim.g.loaded_netrwPlugin = true
 
 vim.g.mapleader = " "
 
