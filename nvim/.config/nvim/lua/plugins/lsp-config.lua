@@ -1,7 +1,7 @@
 return {
   {
     "ray-x/lsp_signature.nvim",
-    event = "VeryLazy",
+    event = "LspAttach",
     opts = {
       bind = true,
       handler_opts = { border = "rounded" },
@@ -16,6 +16,7 @@ return {
   },
   {
     "williamboman/mason.nvim",
+    cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonUpdate", "MasonLog", "MasonInstallAll" },
     config = function()
       local mason_packages = {
         -- Python
@@ -89,6 +90,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    event = "BufReadPre",
     config = function()
       -- Python
       vim.lsp.enable("pyright")
