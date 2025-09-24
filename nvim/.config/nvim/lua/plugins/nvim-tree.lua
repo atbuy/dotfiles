@@ -10,6 +10,11 @@ end
 
 return {
   "nvim-tree/nvim-tree.lua",
+  cmd = { "NvimTreeToggle", "NvimTreeFocus", "NvimTreeFindFile" },
+  keys = {
+    { "<leader>e", ":NvimTreeFocus<CR>",  desc = "Focus tree" },
+    { "<C-n>",     ":NvimTreeToggle<CR>", desc = "Toggle tree" },
+  },
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
@@ -34,10 +39,5 @@ return {
         },
       },
     })
-
-    -- Focus on tree on setup
-    -- vim.cmd("NvimTreeFocus")
-
-    require("keymaps.nvim-tree")
   end,
 }
