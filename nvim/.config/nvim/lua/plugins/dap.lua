@@ -26,7 +26,7 @@ return {
     dapui.setup()
 
     local dap_python = require("dap-python")
-    dap_python.setup("~/.pyenv/versions/debugpy/bin/python")
+    dap_python.setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
     dap_python.test_runner = "pytest"
 
     dap.listeners.before.attach.dapui_config = function()
