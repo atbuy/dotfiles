@@ -21,7 +21,7 @@ opts.desc = "Get references"
 keymap("n", "gr", vim.lsp.buf.references, opts)
 
 opts.desc = "Signature help"
-keymap("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+keymap("n", "gk", vim.lsp.buf.signature_help, opts)
 
 opts.desc = "Rename"
 keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)
