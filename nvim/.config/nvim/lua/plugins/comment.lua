@@ -1,6 +1,9 @@
 return {
   "numToStr/Comment.nvim",
-  event = "VeryLazy",
+  keys = {
+    { "<leader>/", function() require("Comment.api").toggle.linewise.current() end,             modes = { "n" }, desc = "Toggle comment for line" },
+    { "<leader>/", "<Esc>:lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", modes = { "v" }, desc = "Toggle comment for selection" },
+  },
   config = function()
     require("Comment").setup({
       padding = true,
