@@ -1,0 +1,16 @@
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set relativenumber
+set foldmethod=indent
+set foldcolumn=0
+set foldlevel=20
+set number
+set wrap
+set nocursorcolumn
+set ignorecase
+set signcolumn=yes
+set smartindent
+set noswapfile
+set smartcase
