@@ -45,8 +45,9 @@ return {
       dapui.close()
     end
 
-    require("keymaps.dap")
-
-    vim.fn.sign_define("DapBreakpoint", { text = "•", texthl = "red", linehl = "", numhl = "" })
+    vim.fn.sign_define("DapBreakpoint", { text = "•", texthl = "DapBreakpoint", linehl = "", numhl = "" })
+    vim.fn.sign_define("DapStopped", { text = "•", texthl = "DapStopped", linehl = "Visual", numhl = "" })
+    vim.cmd([[highlight DapBreakpoint guifg=Red]])
+    vim.cmd([[highlight DapStopped guifg=Yellow]])
   end
 }
