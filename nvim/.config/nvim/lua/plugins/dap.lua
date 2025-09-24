@@ -1,5 +1,20 @@
 return {
   "mfussenegger/nvim-dap",
+  cmd = {
+    "DapContinue",
+    "DapToggleBreakpoint",
+    "DapStepInto",
+    "DapStepOver",
+    "DapStepOut",
+    "DapTerminate",
+  },
+  keys = {
+    { "<leader>dt",  function() require("dap").toggle_breakpoint() end, desc = "Toggle debugger breakpoint" },
+    { "<leader>dbs", function() require("dap").continue() end,          desc = "Launch debugging session" },
+    { "<leader>dso", function() require("dap").step_over() end,         desc = "Debugger step over" },
+    { "<leader>dsi", function() require("dap").step_into() end,         desc = "Debugger step into" },
+    { "<leader>dv",  function() require("dap").repl.open() end,         desc = "Debugger view state" },
+  },
   dependencies = {
     "rcarriga/nvim-dap-ui",
     "nvim-neotest/nvim-nio",
