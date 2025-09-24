@@ -9,6 +9,8 @@ font-size = 13
 # Theme
 theme = Nvim Dark
 background = 282828
+background-opacity = 0.90
+background-blur = 20
 
 # Keybind tabs
 keybind = ctrl+1=goto_tab:1
