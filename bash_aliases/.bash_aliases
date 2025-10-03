@@ -6,7 +6,7 @@ function cover () {
   pytest --cov-report=term-missin --cov-report=html --cov=$1 tests/
 }
 
-column_pattern="CONTAINER ID|IMAGE|COMMAND|CREATED|STATUS|PORTS|NAMES|"
+column_pattern="CONTAINER ID|IMAGE|COMMAND|CREATED|STATUS|PORTS|NAMES|IMAGE ID|REPOSITORY|TAG|CREATED|SIZE|"
 CONTAINER_GREP="GREP_COLORS='ms=1;31' grep --color=always -E '${container_pattern}'"
 COLUMN_GREP="GREP_COLORS='ms=01;94' grep --color=always -E '${column_pattern}'"
 
@@ -20,7 +20,8 @@ alias dpsf="docker ps --format 'table {{.Image}}\t{{.Status}}\t{{.Names}}' | ${C
 alias dpsa="docker ps -a | ${CONTAINER_GREP} | ${COLUMN_GREP}"
 alias dpsaf="docker ps -a --format 'table {{.Image}}\t{{.Status}}\t{{.Names}}' | ${CONTAINER_GREP} | ${COLUMN_GREP}"
 alias dlf="docker logs -f"
-
+alias di="docker images | ${COLUMN_GREP}"
+alias ddu="docker compose down --remove-orphans && docker compose up --build -d"
 
 tns_command() {
   tmux new-session -d -n ide -s $1
