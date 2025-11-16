@@ -8,8 +8,8 @@ font-size = 13
 
 # Theme
 theme = Nvim Dark
-background = 282828
-background-opacity = 0.90
+background = 323232
+background-opacity = 0.5
 background-blur = 20
 
 # Keybind tabs
