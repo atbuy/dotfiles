@@ -143,3 +143,4 @@ alias lzg="lazygit"
 
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export EDITOR="vim"
+export QT_QPA_PLATFORM=xcb
