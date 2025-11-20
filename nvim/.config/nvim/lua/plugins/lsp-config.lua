@@ -129,10 +129,10 @@ return {
       vim.lsp.config.arduino_language_server = {
         cmd = {
           "arduino-language-server",
-          "-clangd", "~/.local/share/nvim/mason/bin/clangd",
+          "-clangd", "/usr/bin/clangd",
           "-cli", "/usr/bin/arduino-cli",
           "-cli-config", "~/.arduino15/arduino-cli.yaml",
-          "-fqbn", "arduino:avr:uno",
+          "-fqbn", "arduino:avr:nano",
         }
 
       }
