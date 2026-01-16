@@ -21,6 +21,7 @@ return {
       local mason_packages = {
         -- Python
         "pyright",
+        "ty",
         "ruff",
         "debugpy",
         "mypy",
@@ -99,7 +100,8 @@ return {
     event = "BufReadPre",
     config = function()
       -- Python
-      vim.lsp.enable("pyright")
+      -- vim.lsp.enable("pyright")
+      vim.lsp.enable("ty")
       vim.lsp.enable("ruff")
 
       -- Go
