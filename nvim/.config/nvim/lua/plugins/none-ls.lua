@@ -3,6 +3,8 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     local null_ls = require("null-ls")
+    local custom_sources = require("custom.none_ls")
+
     null_ls.setup({
       sources = {
         -- Lua
@@ -20,7 +22,15 @@ return {
         -- Javascript
         null_ls.builtins.formatting.prettier,
         -- require("none-ls.diagnostics.eslint_d"),
+
+        -- Custom
+        custom_sources.typos.diagnostics,
+        custom_sources.typos.code_actions,
       },
+    })
+
+    vim.diagnostic.config({
+      update_in_insert = true,
     })
 
     require("keymaps.none-ls")
