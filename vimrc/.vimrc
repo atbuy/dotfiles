@@ -14,4 +14,5 @@ set signcolumn=yes
 set smartindent
 set noswapfile
 set smartcase
+syntax on
 colorscheme slate
