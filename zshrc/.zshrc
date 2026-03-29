@@ -143,8 +143,10 @@ alias lzg="lazygit"
 
 alias n="noteui"
 
-export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export EDITOR="vim"
+export NOTEUI_EDITOR="nvim"
+
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export QT_QPA_PLATFORM=xcb
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
