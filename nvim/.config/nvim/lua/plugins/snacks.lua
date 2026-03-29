@@ -7,6 +7,19 @@ return {
     lazygit = { enabled = true },
     bigfile = { enabled = true },
     quickfile = { enabled = true },
+    scroll = {},
+    notifier = {
+      level = vim.log.levels.WARN,
+    },
+    indent = {
+      enabled = true,
+      animate = {
+        duration = {
+          step = 20,
+          total = 250,
+        }
+      }
+    },
     dashboard = {
       enabled = true,
       width = 100,
@@ -62,6 +75,7 @@ return {
     },
   },
   keys = {
-    { "<leader>lg", function() require("snacks").lazygit() end, desc = "Lazygit" },
+    { "<leader>lg", function() require("snacks").lazygit() end,               desc = "Lazygit" },
+    { "<leader>nh", function() require("snacks").notifier.show_history() end, desc = "Show notification history" },
   }
 }
