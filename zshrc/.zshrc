@@ -141,6 +141,8 @@ alias cd=z
 alias lzd="lazydocker"
 alias lzg="lazygit"
 
+alias n="noteui"
+
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export EDITOR="vim"
 export QT_QPA_PLATFORM=xcb
