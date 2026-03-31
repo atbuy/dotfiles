@@ -64,13 +64,18 @@ window#waybar.hidden {
 #network,
 #tray,
 #memory,
-#window {
+#window,
+#custom-gpu {
   padding: 0px 8px;
   margin: 6px 3px;
   color: #e5e5e5;
   /* border-radius: 20px; */
   border-radius: 5px;
   background-color: #1e1e1e;
+}
+
+#custom-gpu {
+  color: #e05a51
 }
 
 #custom-logo {

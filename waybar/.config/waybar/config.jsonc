@@ -11,7 +11,8 @@
     "custom/logo",
     "hyprland/workspaces",
     "cpu",
-    "memory"
+    "memory",
+    "custom/gpu"
   ],
   "modules-right": [
     "pulseaudio",
@@ -65,6 +66,13 @@
   },
   "memory": {
     "format": "  {used:0.2f}G"
+  },
+  "custom/gpu": {
+    "exec": "~/.config/waybar/gpu-usage.sh",
+    "interval": 1,
+    "return-type": "json",
+    "format": "󰢮 {text}",
+    "tooltip": true
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
