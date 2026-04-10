@@ -7,18 +7,8 @@ return {
     lazygit = { enabled = true },
     bigfile = { enabled = true },
     quickfile = { enabled = true },
-    scroll = {},
     notifier = {
       level = vim.log.levels.WARN,
-    },
-    indent = {
-      enabled = true,
-      animate = {
-        duration = {
-          step = 20,
-          total = 250,
-        }
-      }
     },
     dashboard = {
       enabled = true,
