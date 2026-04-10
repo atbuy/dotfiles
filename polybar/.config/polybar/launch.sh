@@ -1,17 +1,25 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 killall -q polybar
 
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+while pgrep -u "$UID" -x polybar >/dev/null; do
+  sleep 0.2
+done
 
-if type "xrandr"; then
-  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    if [ "$m" = "HDMI-1" ]; then
-      MONITOR=$m polybar --config=$HOME/.config/polybar/config.ini --reload=toph &
-    else
-      MONITOR=$m polybar --config=$HOME/.config/polybar/config-other.ini --reload=toph &
-    fi
-  done
-else
-  polybar --config=$HOME/.config/polybar/config.ini --reload=toph &
-fi
+primary="HDMI-1"
+
+while IFS= read -r line; do
+  monitor="${line%%:*}"
+
+  if [[ "$monitor" == "$primary" ]]; then
+    MONITOR="$monitor" \
+    POLYBAR_CENTER="" \
+    POLYBAR_RIGHT="wlan battery date systray" \
+    polybar -c "$HOME/.config/polybar/config.ini" --reload toph &
+  else
+    MONITOR="$monitor" \
+    POLYBAR_CENTER="" \
+    POLYBAR_RIGHT="battery date" \
+    polybar -c "$HOME/.config/polybar/config.ini" --reload toph &
+  fi
+done < <(polybar --list-monitors)

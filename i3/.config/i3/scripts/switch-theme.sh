@@ -2,32 +2,16 @@
 
 set -euo pipefail
 
-THEME_DIR="${HOME}/.config/i3/themes"
-LINK_PATH="${HOME}/.config/i3/current-theme.conf"
+theme="${1:?usage: switch-theme.sh <theme>}"
 
-if [[ $# -lt 1 ]]; then
-  echo "Usage: $(basename "$0") <theme-name>"
-  echo
-  echo "Available themes:"
-  find "$THEME_DIR" -maxdepth 1 -type f -name '*.conf' -printf '%f\n' | sed 's/\.conf$//' | sort
-  exit 1
-fi
+i3_theme="$HOME/.config/i3/themes/$theme.conf"
+polybar_theme="$HOME/.config/polybar/themes/$theme.ini"
 
-theme="$1"
-target="${THEME_DIR}/${theme}.conf"
+[[ -f "$i3_theme" ]] || { echo "Missing i3 theme: $theme"; exit 1; }
+[[ -f "$polybar_theme" ]] || { echo "Missing polybar theme: $theme"; exit 1; }
 
-if [[ ! -f "$target" ]]; then
-  echo "Theme not found: $theme"
-  echo
-  echo "Available themes:"
-  find "$THEME_DIR" -maxdepth 1 -type f -name '*.conf' -printf '%f\n' | sed 's/\.conf$//' | sort
-  exit 1
-fi
+ln -sfn "$i3_theme" "$HOME/.config/i3/current-theme.conf"
+ln -sfn "$polybar_theme" "$HOME/.config/polybar/colors-current.ini"
 
-ln -sfn "$target" "$LINK_PATH"
-
-if command -v i3-msg >/dev/null 2>&1; then
-  i3-msg reload >/dev/null
-fi
-
-echo "Switched i3 theme to: $theme"
+i3-msg reload >/dev/null
+"$HOME/.config/polybar/launch.sh" >/dev/null 2>&1 &
