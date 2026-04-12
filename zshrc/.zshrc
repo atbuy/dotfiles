@@ -151,6 +151,9 @@ export QT_QPA_PLATFORM=xcb
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-# if ! ssh-add -l >/dev/null 2>&1; then
-#     ssh-add ~/.ssh/id_ed25519
-# fi
+if [ -z "$SSH_AUTH_SOCK" ] || [ ! -S "$SSH_AUTH_SOCK" ]; then
+  export SSH_AUTH_SOCK="$HOME/.ssh/ssh-agent.sock"
+  if [ ! -S "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -a "$SSH_AUTH_SOCK")" >/dev/null
+  fi
+fi
