@@ -1,0 +1,9 @@
+[overall]
+bg = "#1e1e2e"
+
+[flavor]
+dark = "tokyo-night"
+light = "tokyo-night"
+
+[indicator]
+padding = { open = "▐", close = "▌" }

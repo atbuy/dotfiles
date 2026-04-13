@@ -1,0 +1,10 @@
+[[mgr.prepend_keymap]]
+on = "!"
+for = "unix"
+run = 'shell "$SHELL" --block'
+desc = "Open shell here"
+
+[[mgr.prepend_keymap]]
+on = "<C-d>"
+run = "plugin diff"
+desc = "Diff the selected with the hovered file"
