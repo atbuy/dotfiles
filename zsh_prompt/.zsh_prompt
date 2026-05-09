@@ -1,5 +1,5 @@
 RED="%B%F{red}%b"
-PURPLE="%B%F{purple}%b"
+PURPLE="%B%F{magenta}%b"
 YELLOW="%B%F{yellow}%b"
 BLUE="%B%F{blue}%b"
 GREEN="%B%F{green}%b"
