@@ -143,6 +143,9 @@ alias lzg="lazygit"
 
 alias n="noteui"
 
+alias c="carrier"
+alias cr="carrier run"
+
 export EDITOR="vim"
 export NOTEUI_EDITOR="nvim"
 
