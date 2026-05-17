@@ -39,6 +39,9 @@ return {
         -- C
         "clangd",
 
+        -- Odin,
+        "ols",
+
         -- PHP
         "phpactor",
 
@@ -106,6 +109,9 @@ return {
 
       -- Go
       vim.lsp.enable("gopls")
+
+      -- Odin
+      vim.lsp.enable("ols")
 
       -- HTML/CSS/JS
       vim.lsp.enable("emmet_ls")
