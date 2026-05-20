@@ -12,7 +12,7 @@ COLUMN_GREP="GREP_COLORS='ms=01;94' grep --color=always -E '${column_pattern}'"
 
 # Docker shortcuts
 de() {
-  docker exec -it $1 sh
+  docker exec -it $1 zsh
 }
 
 alias dps="docker ps --format 'table {{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}' | ${CONTAINER_GREP} | ${COLUMN_GREP}"
