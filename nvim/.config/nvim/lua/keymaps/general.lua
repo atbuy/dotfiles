@@ -40,3 +40,7 @@ keymap("n", "<C-c>", ":%y+<CR>", opts)
 -- Format JSON with jq
 opts.desc = "Format JSON file with jq"
 keymap("n", "<leader>fj", ":%!jq --sort-keys '.'<CR>", opts)
+
+-- Copy to clipboard
+opts.desc = "Easier copy to clipboard"
+keymap("v", "<leader>y", '"+y')
