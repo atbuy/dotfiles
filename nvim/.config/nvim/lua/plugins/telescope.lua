@@ -7,7 +7,7 @@ local keys = {
   { "<leader>cm", ":Telescope git_commits<CR>",               desc = "View git commits" },
   { "<leader>gt", ":Telescope git_status<CR>",                desc = "View git status" },
   { "<leader>ma", ":Telescope marks<CR>",                     desc = "View all marks" },
-  { "<leader>fh", ":Telescope harpoon marks<CR>",             desc = "Fuzzy search Harpoon marks" },
+  { "<leader>fs", ":Telescope harpoon marks<CR>",             desc = "Fuzzy search Harpoon marks" },
   {
     "<leader>fa",
     function()
