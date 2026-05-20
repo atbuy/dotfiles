@@ -25,6 +25,8 @@ return {
         "ruff",
         "debugpy",
         "mypy",
+        "pyrefly",
+        "zuban",
 
         -- Lua
         "stylua",
@@ -106,6 +108,8 @@ return {
       -- vim.lsp.enable("pyright")
       vim.lsp.enable("ty")
       vim.lsp.enable("ruff")
+      -- vim.lsp.enable("pyrefly")
+      -- vim.lsp.enable("zuban")
 
       -- Go
       vim.lsp.enable("gopls")
