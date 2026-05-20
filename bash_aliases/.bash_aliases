@@ -3,7 +3,7 @@ function exp () {
 }
 
 function cover () {
-  pytest --cov-report=term-missin --cov-report=html --cov=$1 tests/
+  pytest --cov-report=term-missing --cov-report=html --cov=$1 tests/
 }
 
 column_pattern="CONTAINER ID|IMAGE|COMMAND|CREATED|STATUS|PORTS|NAMES|IMAGE ID|REPOSITORY|TAG|CREATED|SIZE|"
