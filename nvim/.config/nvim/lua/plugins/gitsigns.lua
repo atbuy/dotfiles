@@ -2,7 +2,7 @@ return {
   "lewis6991/gitsigns.nvim",
   event = { "BufReadPre", "BufNewFile" },
   keys = {
-    { "gb", function() require("gitsigns").blame_line() end,     "Git blame line" },
+    { "gb", function() require("gitsigns").blame_line() end,     desc = "Git blame line" },
     { "td", function() require("gitsigns").toggle_deleted() end, desc = "Toggle deleted lines" },
     {
       "]c",
