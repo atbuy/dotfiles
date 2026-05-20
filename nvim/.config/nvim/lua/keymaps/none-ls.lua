@@ -15,7 +15,7 @@ keymap("n", "<leader>fm", function()
     local name = client["name"]
 
     if name == "ruff" and not ruff_formatted then
-      ruff_formatted = false
+      ruff_formatted = true
       vim.lsp.buf.code_action({
         context = { only = { "source.organizeImports" } },
         apply = true,
