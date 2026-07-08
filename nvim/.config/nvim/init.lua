@@ -14,6 +14,7 @@ vim.opt.foldenable = true
 vim.opt.mousescroll = "ver:1"
 vim.opt.number = true
 vim.opt.wrap = true
+vim.opt.cursorline = true
 vim.opt.cursorcolumn = false
 vim.opt.ignorecase = true
 vim.opt.termguicolors = true

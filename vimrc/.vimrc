@@ -8,6 +8,7 @@ set foldcolumn=0
 set foldlevel=20
 set number
 set wrap
+set cursorline
 set nocursorcolumn
 set ignorecase
 set signcolumn=yes
