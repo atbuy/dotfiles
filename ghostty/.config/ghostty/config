@@ -24,6 +24,8 @@ keybind = ctrl+8=goto_tab:8
 keybind = ctrl+9=goto_tab:9
 keybind = ctrl+0=last_tab
 keybind = ctrl+shift+w=close_tab
+keybind = ctrl+shift+n=next_tab
+keybind = ctrl+shift+p=previous_tab
 
 # Keybind splits
 keybind = ctrl+shift+|=new_split:right
