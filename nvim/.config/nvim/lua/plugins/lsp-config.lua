@@ -88,6 +88,7 @@ return {
         "jq-lsp",                    -- JSON
         "yaml-language-server",      -- YAML
         "autotools-language-server", -- Make
+        "postgres-language-server",  -- Postgres
       }
 
       require("mason").setup({
@@ -160,6 +161,7 @@ return {
 
       -- SQL
       vim.lsp.enable("sqlls")
+      -- vim.lsp.enable("postgres-language-server")
 
       -- JSON
       vim.lsp.enable("jqls")
