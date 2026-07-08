@@ -1,2 +1,13 @@
+[meta]
+includes = ["root.toml", "sync.toml", "workspaces.toml"]
+
 [theme]
-name = "catppuccin"
+name = "rose-pine"
+
+[preview]
+render_markdown = true
+style = "dark"
+syntax_highlight = true
+code_style = "monokai"
+privacy = false
+line_numbers = true
