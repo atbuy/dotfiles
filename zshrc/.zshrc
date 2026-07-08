@@ -146,7 +146,7 @@ alias n="noteui"
 alias c="carrier"
 alias cr="carrier run"
 
-export EDITOR="vim"
+export EDITOR="nvim"
 export NOTEUI_EDITOR="nvim"
 
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
