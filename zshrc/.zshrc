@@ -20,11 +20,6 @@ export BAT_THEME="Coldark-Dark"
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
 
-# Run neofetch only if we are not in a TMUX session
-if [[ -z "$TMUX" ]] ; then
-  fastfetch
-fi
-
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -159,3 +154,11 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # OpenCode
 export PATH=$HOME/.opencode/bin:$PATH
+
+# Added by carrier setup: record every terminal in a carrier session.
+eval "$(carrier init zsh)"
+
+# Run fastfetch only if we are not in a TMUX session or a carrier shell
+if [[ -z "$TMUX" || -z "$CARRIER_SESSION_ID" ]] ; then
+  fastfetch
+fi
