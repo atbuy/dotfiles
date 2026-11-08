@@ -1,0 +1,3 @@
+theme = "ultraviolet"
+after_select = "edit"
+magnifier = true
