@@ -155,6 +155,9 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # OpenCode
 export PATH=$HOME/.opencode/bin:$PATH
 
+# Initialize fzf
+eval "$(fzf --zsh)"
+
 # Added by carrier setup: record every terminal in a carrier session.
 eval "$(carrier init zsh)"
 
