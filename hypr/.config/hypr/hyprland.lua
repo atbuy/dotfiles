@@ -284,7 +284,7 @@ hl.bind(mainMod .. " + E", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + K", hl.dsp.layout("swapsplit"))
 
 -- Screenshots
-hl.bind("CONTROL + F12", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
+hl.bind("CONTROL + F12", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.local/bin/cot"))
 hl.bind("CONTROL + F11", hl.dsp.exec_cmd("XDG_CURRENT_DESKTOP=sway flameshot gui"))
 
 -- Brightness
