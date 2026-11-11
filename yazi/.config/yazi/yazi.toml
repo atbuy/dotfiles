@@ -8,11 +8,11 @@ show_hidden = true
 show_symlink = true
 
 [[plugin.prepend_fetchers]]
-id  = "git"
 url = "*"
 run = "git"
+group = "git"
 
 [[plugin.prepend_fetchers]]
-id  = "git"
 url = "*/"
 run = "git"
+group = "git"

@@ -1,22 +1,22 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "babfd0f"
-hash = "6fa6a05a81c98dd000fbca3cca6e9682"
+rev = "1ef5fe0"
+hash = "17ebde15c4349f90aedbc45984b98db2"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "babfd0f"
-hash = "26db011a778f261d730d4f5f8bf24b3f"
+rev = "1ef5fe0"
+hash = "347cc6b190eb0c2fd60513cc7ae37412"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "babfd0f"
-hash = "8b1af6b5a69797ee951f2a80ce570818"
+rev = "1ef5fe0"
+hash = "14558d2829c0aa05e99c57de8f74d199"
 
 [[flavor.deps]]
 use = "marcosvnmelo/kanagawa-dragon"
-rev = "b9541e8"
-hash = "dc840cf225dbf6f0257617403ad43d8b"
+rev = "b433f4a"
+hash = "b967c24a30350b1c5cd3a2ad5a7732e7"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
