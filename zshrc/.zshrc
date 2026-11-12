@@ -96,6 +96,9 @@ eval "$(pyenv virtualenv-init -)"
 # Load aliases
 source ~/.bash_aliases
 
+# Load hidden aliases
+[[ -f ~/.hidden_aliases ]] && source ~/.hidden_aliases
+
 # Update prompt
 source ~/.zsh_prompt
 
